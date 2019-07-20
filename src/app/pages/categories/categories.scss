@@ -1,0 +1,41 @@
+@import '../../styles/_variables';
+
+.categories{
+  display: block;
+  overflow: auto;
+}
+.example-card {
+  display:inline-block;
+  margin:20px;
+}
+.list-title{
+  text-align: center;
+}
+/* Mobile Styles */
+@media only screen and (max-width: 576px) {
+  .example-card {
+    width:200px;
+    height:200px;
+
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  .example-card {
+    width:300px;
+    height:200px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 993px) {
+  .example-card {
+    width:400px;
+    height:150px;
+  }
+}
+
+.mat-card-header{
+  margin-bottom:20px;
+}

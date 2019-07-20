@@ -1,0 +1,34 @@
+<div class="alert-modal">
+  <h3 class="alert-modal-title">NEW TASK</h3>
+  <div>
+    <form [formGroup]="taskForm" class="form" (ngSubmit)="onSubmit(taskForm.value)">
+      <input class="form-control form-input" type="text" formControlName="title" placeholder="Title" />
+      <mat-error *ngFor="let validation of form_validation_messages.title">
+        <mat-error class="error-message"
+          *ngIf="taskForm.get('title').hasError(validation.type) && (taskForm.get('title').dirty || taskForm.get('title').touched)">
+          {{validation.message}}</mat-error>
+      </mat-error>
+      <br>
+      <textarea rows=3 class="form-control form-input" type="text" formControlName="content"
+        placeholder="Content"></textarea>
+      <mat-error *ngFor="let validation of form_validation_messages.content">
+        <mat-error class="error-message"
+          *ngIf="taskForm.get('content').hasError(validation.type) && (taskForm.get('content').dirty || taskForm.get('content').touched)">
+          {{validation.message}}</mat-error>
+      </mat-error>
+      <br>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Due date" formControlName="dueDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+  <div class="alert-modal-buttons" style="  overflow-x: hidden;">
+        <button mat-raised-button color="primary" class="col alert-modal-button alert-modal-button-success"
+          type="submit">YES!</button>
+        <button mat-raised-button class="col alert-modal-button alert-modal-button-failure" type="button"
+          (click)="onCloseCancel()">Nah, later...</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+ [
+    {
+      "slug": "urgentImportant",
+      "title": "Urgent and Important - DO",
+      "description": "Tasks you will do immediately"
+    },
+    {
+      "slug": "importantNotUrgent",
+      "title": "Important but not Urgent - DECIDE ",
+      "description": "Tasks you will schedule to do later"
+    },
+    {
+      "slug": "urgentNotImportant",
+      "title": "Urgent but not Important - DELEGATE",
+      "description": "Tasks you will delegate to someone else"
+    },
+    {
+      "slug": "notUrgentnotImportant",
+      "title": "Not Urgent Not Important - DELETE ",
+      "description": "Tasks that you will eliminate"
+    }
+  ]
