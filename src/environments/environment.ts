@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url: ' https://warm-everglades-83543.herokuapp.com/'
+  api_url: ' https://warm-everglades-83543.herokuapp.com'
 };
 
 /*
