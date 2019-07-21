@@ -12,4 +12,4 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Demo
 
-https://zzminxwo.github.stackblitz.io/
+https://stackblitz.com/github/ViriyaLucky/Eisenhower-Matrix
