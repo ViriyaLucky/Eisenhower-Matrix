@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "eisenhowerMatrix": {
+    "eisenhower-matrix": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/eisenhowerMatrix",
+            "outputPath": "dist/eisenhower-matrix",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "eisenhowerMatrix:build"
+            "browserTarget": "eisenhower-matrix:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "eisenhowerMatrix:build:production"
+              "browserTarget": "eisenhower-matrix:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "eisenhowerMatrix:build"
+            "browserTarget": "eisenhower-matrix:build"
           }
         },
         "test": {
@@ -110,7 +110,7 @@
         }
       }
     },
-    "eisenhowerMatrix-e2e": {
+    "eisenhower-matrix-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -119,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "eisenhowerMatrix:serve"
+            "devServerTarget": "eisenhower-matrix:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "eisenhowerMatrix:serve:production"
+              "devServerTarget": "eisenhower-matrix:serve:production"
             }
           }
         },
@@ -139,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "eisenhowerMatrix"
+  "defaultProject": "eisenhower-matrix"
 }
