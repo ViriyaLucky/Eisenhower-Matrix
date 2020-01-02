@@ -2,7 +2,6 @@
 
 Eisenhower Matrix using Angular + Loopback + MongoDB
 
-
 ## Installation
 
 Run `npm install` to install all the required dependencies
