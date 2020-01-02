@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CategoryModel } from "./category.model";
+import { CategoryModel } from './category.model';
 import { CategoriesService } from '../../services/categories.service';
 @Component({
   selector: 'categories',
@@ -18,7 +18,7 @@ export class CategoriesComponent implements OnInit {
         this.categories = routeData.data.categories;
         this.count = routeData.data.count;
       }
-    })
+    });
   }
 
   ngOnInit(): void {
