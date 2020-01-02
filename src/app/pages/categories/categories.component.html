@@ -3,8 +3,18 @@
   <div class="card col-md-offset-2 col-md-10">
     <mat-card class="example-card" *ngFor="let category of categories">
       <mat-card-header>
-        <mat-card-title> <a [routerLink]="['/category/', category.slug]">{{category.title}}</a> <div *ngFor="let co of count"><h4 *ngIf="co.categories == category.slug">{{co.count}} Task</h4></div></mat-card-title>
-        <mat-card-subtitle> {{category.description}} </mat-card-subtitle>
+        <mat-card-title>
+          <a [routerLink]="['/category/', category.slug]">{{
+            category.title
+          }}</a>
+          <div *ngFor="let co of count">
+            <h4 *ngIf="co.categories == category.slug">
+              <div *ngIf="co.count == 0; else content">No Task yet</div>
+              <ng-template #content> {{ co.count }} Task</ng-template>
+            </h4>
+          </div></mat-card-title
+        >
+        <mat-card-subtitle> {{ category.description }} </mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>

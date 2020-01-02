@@ -10,8 +10,8 @@ export class CategoryTasksResolver implements Resolve<any> {
   constructor(
     private taskService: TaskService,
     private categoriesService: CategoriesService,
-    private router:Router
-   ) { }
+    private router: Router
+  ) { }
 
   resolve(route: ActivatedRouteSnapshot) {
 
@@ -21,11 +21,11 @@ export class CategoryTasksResolver implements Resolve<any> {
       console.log(category_slug);
       observableForkJoin(
         this.categoriesService.getCategoryBySlug(category_slug),
-        this.taskService.getTasksByCategory(category_slug)
+        this.taskService.getTasksByCategory()
       ).subscribe(
         data => {
 
-          if(data[0] == undefined){
+          if (data[0] == undefined) {
             this.router.navigate(['']);
             return resolve(null);
           }

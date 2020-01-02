@@ -1,6 +1,6 @@
-# Angular Project: Simple Eisenhower Matrix
+# Angular Project: Eisenhower Matrix
 
-Simple Eisenhower Matrix using Angular + Loopback + MongoDB
+Eisenhower Matrix using Angular + Loopback + MongoDB
 
 
 ## Installation

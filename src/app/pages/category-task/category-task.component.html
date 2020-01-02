@@ -1,7 +1,11 @@
 <div class="card col-md-offset-2 col-md-8 tasks">
   <h3 class="list-title">{{ categoryTitle }}</h3>
-  <!-- TODO: add delete task-->
-  <button mat-raised-button color="primary" (click)="openNewTaskModal(categorySlug)">
+  <!-- TODO: add edit task, scroll to top -->
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openNewTaskModal(categorySlug)"
+  >
     New Task
   </button>
   <br />
@@ -9,23 +13,23 @@
   <div class="header" *ngFor="let tasks of task">
     <mat-card class="example-card" *ngIf="tasks.category == this.categorySlug">
       <div class="new">
-          <span>
-            <a (click)="openNewTaskModal(categorySlug)">+</a>
-          </span>
+        <span>
+          <a (click)="openNewTaskModal(categorySlug)">+</a>
+        </span>
       </div>
       <mat-card-header class="header">
         <mat-card-title>{{ tasks.title }}</mat-card-title>
       </mat-card-header>
       <div class="close">
-          <span>
-            <a (click)="delete(tasks.id)">X</a>
-          </span>
+        <span>
+          <a (click)="delete(tasks.id)">X</a>
+        </span>
       </div>
-      <mat-card-content >
+      <mat-card-content>
         <p style="height: auto; overflow-x: auto">
           {{ tasks.content }}
         </p>
-        <p>Due Date: {{ tasks.dueDate |  date :'fullDate' }}</p>
+        <p>Due Date: {{ tasks.dueDate | date: "fullDate" }}</p>
       </mat-card-content>
     </mat-card>
   </div>
