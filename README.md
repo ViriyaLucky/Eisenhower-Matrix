@@ -12,3 +12,9 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 ## Demo
 
 https://eisenhower-simple.herokuapp.com/
+
+## Loopback
+
+https://github.com/ViriyaLucky/Eisenhower-Matrix-Backend
+
+Heroku: https://warm-everglades-83543.herokuapp.com/
