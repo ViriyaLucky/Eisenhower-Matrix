@@ -18,7 +18,6 @@ export class CategoryTasksResolver implements Resolve<any> {
     return new Promise((resolve, reject) => {
       //get current category slug form url
       let category_slug = route.paramMap.get('categorySlug');
-      console.log(category_slug);
       observableForkJoin(
         this.categoriesService.getCategoryBySlug(category_slug),
         this.taskService.getTasksByCategory()

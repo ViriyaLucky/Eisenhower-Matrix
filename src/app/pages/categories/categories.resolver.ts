@@ -29,8 +29,8 @@ export class CategoriesResolver implements Resolve<any> {
           categories => {
             let count: Categories[] = [];
             this.taskService.getTasksByCategory().then((data) => {
-              console.log(data);
-              console.log(categories);
+              //console.log(data);
+              //console.log(categories);
               categories.forEach(function (category) {
                 let total = 0;
                 data.forEach(function (item) {
@@ -38,14 +38,14 @@ export class CategoriesResolver implements Resolve<any> {
                     total++;
                   }
                 });
-                console.log("Total: " + total);
+                // console.log("Total: " + total);
                 const dataCount = {
                   categories: category.slug,
                   count: total
                 }
                 count.push(dataCount);
               });
-              console.log(count);
+              // console.log(count);
             });
             return resolve({
               categories: categories,
