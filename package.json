@@ -28,7 +28,7 @@
     "@angular/router": "^8.2.14",
     "bootstrap-sass": "^3.4.1",
     "core-js": "^2.6.11",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "loadash": "^1.0.0",
